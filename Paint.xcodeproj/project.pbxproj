@@ -15,6 +15,9 @@
 		55C8B5751BFA220A00762A41 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55C8B5731BFA220A00762A41 /* LaunchScreen.storyboard */; };
 		55C8B5801BFA220A00762A41 /* PaintTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 55C8B57F1BFA220A00762A41 /* PaintTests.m */; };
 		55C8B58B1BFA220A00762A41 /* PaintUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 55C8B58A1BFA220A00762A41 /* PaintUITests.m */; };
+		55C8B59D1BFA232800762A41 /* BezierStep.m in Sources */ = {isa = PBXBuildFile; fileRef = 55C8B59C1BFA232800762A41 /* BezierStep.m */; };
+		55C8B5A11BFA245500762A41 /* PaintStep.m in Sources */ = {isa = PBXBuildFile; fileRef = 55C8B5A01BFA245500762A41 /* PaintStep.m */; };
+		55C8B5A81BFA24FB00762A41 /* PaintView.m in Sources */ = {isa = PBXBuildFile; fileRef = 55C8B5A71BFA24FB00762A41 /* PaintView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,12 @@
 		55C8B5861BFA220A00762A41 /* PaintUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PaintUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		55C8B58A1BFA220A00762A41 /* PaintUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PaintUITests.m; sourceTree = "<group>"; };
 		55C8B58C1BFA220A00762A41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		55C8B59B1BFA232800762A41 /* BezierStep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BezierStep.h; path = Model/BezierStep.h; sourceTree = "<group>"; };
+		55C8B59C1BFA232800762A41 /* BezierStep.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BezierStep.m; path = Model/BezierStep.m; sourceTree = "<group>"; };
+		55C8B59F1BFA245500762A41 /* PaintStep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PaintStep.h; path = Model/PaintStep.h; sourceTree = "<group>"; };
+		55C8B5A01BFA245500762A41 /* PaintStep.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PaintStep.m; path = Model/PaintStep.m; sourceTree = "<group>"; };
+		55C8B5A61BFA24FB00762A41 /* PaintView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PaintView.h; path = View/PaintView.h; sourceTree = "<group>"; };
+		55C8B5A71BFA24FB00762A41 /* PaintView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PaintView.m; path = View/PaintView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +110,7 @@
 		55C8B5641BFA220A00762A41 /* Paint */ = {
 			isa = PBXGroup;
 			children = (
+				55C8B5A21BFA24C200762A41 /* View */,
 				55C8B5681BFA220A00762A41 /* AppDelegate.h */,
 				55C8B5691BFA220A00762A41 /* AppDelegate.m */,
 				55C8B56B1BFA220A00762A41 /* ViewController.h */,
@@ -110,6 +120,7 @@
 				55C8B5731BFA220A00762A41 /* LaunchScreen.storyboard */,
 				55C8B5761BFA220A00762A41 /* Info.plist */,
 				55C8B5651BFA220A00762A41 /* Supporting Files */,
+				55C8B59E1BFA233500762A41 /* Model */,
 			);
 			path = Paint;
 			sourceTree = "<group>";
@@ -138,6 +149,26 @@
 				55C8B58C1BFA220A00762A41 /* Info.plist */,
 			);
 			path = PaintUITests;
+			sourceTree = "<group>";
+		};
+		55C8B59E1BFA233500762A41 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				55C8B59B1BFA232800762A41 /* BezierStep.h */,
+				55C8B59C1BFA232800762A41 /* BezierStep.m */,
+				55C8B59F1BFA245500762A41 /* PaintStep.h */,
+				55C8B5A01BFA245500762A41 /* PaintStep.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		55C8B5A21BFA24C200762A41 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				55C8B5A61BFA24FB00762A41 /* PaintView.h */,
+				55C8B5A71BFA24FB00762A41 /* PaintView.m */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -207,6 +238,7 @@
 				TargetAttributes = {
 					55C8B5611BFA220A00762A41 = {
 						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = WGRUVE6C72;
 					};
 					55C8B57A1BFA220A00762A41 = {
 						CreatedOnToolsVersion = 7.1.1;
@@ -270,9 +302,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55C8B59D1BFA232800762A41 /* BezierStep.m in Sources */,
+				55C8B5A11BFA245500762A41 /* PaintStep.m in Sources */,
 				55C8B56D1BFA220A00762A41 /* ViewController.m in Sources */,
 				55C8B56A1BFA220A00762A41 /* AppDelegate.m in Sources */,
 				55C8B5671BFA220A00762A41 /* main.m in Sources */,
+				55C8B5A81BFA24FB00762A41 /* PaintView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,10 +448,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Paint/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lzr.sideproject.Paint;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -424,10 +462,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Paint/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lzr.sideproject.Paint;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

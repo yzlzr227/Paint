@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "PaintView.h"
 
 @interface ViewController ()
 
@@ -16,6 +17,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    PaintView *paintView = [[PaintView alloc] initWithFrame:self.view.frame];
+    [self.view addSubview:paintView];
     // Do any additional setup after loading the view, typically from a nib.
 }
 
